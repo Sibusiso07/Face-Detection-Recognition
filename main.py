@@ -9,10 +9,12 @@ import threading
 # Initialize known face encodings and names
 known_image_1 = face_recognition.load_image_file('known_faces/Bailu.jpg')
 known_image_2 = face_recognition.load_image_file('known_faces/Keanu.jpg')
+known_image_3 = face_recognition.load_image_file('known_faces/Sanada.jpg')
 known_encoding_1 = face_recognition.face_encodings(known_image_1)[0]
 known_encoding_2 = face_recognition.face_encodings(known_image_2)[0]
-known_face_encodings = [known_encoding_1, known_encoding_2]
-known_face_names = ["Bailu", "Keanu"]
+known_encoding_3 = face_recognition.face_encodings(known_image_3)[0]
+known_face_encodings = [known_encoding_1, known_encoding_2, known_encoding_3]
+known_face_names = ["Bailu", "Keanu", "Sanada"]
 
 class FaceRecognitionApp:
     def __init__(self, root):
